@@ -4,6 +4,9 @@
     --maincolor: hsl(218, 28%, 13%);
     --footercolor: hsl(216, 53%, 9%);
     --testimonialclr: hsl(219, 30%, 18%);
+    --ctacolor1: hsl(176, 68%, 64%);
+    --ctacolor2: hsl(198, 60%, 50%);
+    --rederror: hsl(0, 100%, 63%);
 }
 
 
@@ -11,6 +14,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--maincolor);
 }
 
 .navbar {
@@ -21,24 +25,26 @@ body {
     justify-content: space-between;
     /* max-width: 90%; */
     margin: auto;
-    padding: 20px 24px;
+    padding: 3vw 5vw;
     height: 10vh;
+    /* border-bottom: 2px solid #868484 ; */
 }
 
 ul {
     font-family: "Raleway", sans-serif;
-    font-size: 15px;
+    /* font-size: 4.5vw; */
 }
 
-a {
-    margin-left: 10px;
+ul a {
+    margin-left: 3vw;
     text-decoration: none;
     color: white;
+    font-size: 3vw;
     text-wrap: nowrap;
 }
 
 nav>a>img {
-    height: 25px;
+    height: 7vw;
 }
 
 .intro-container {
@@ -46,33 +52,34 @@ nav>a>img {
 }
 
 .intro-img {
-    width: 400px;
+    width: 75%;
     margin: auto;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 4;
+    position: relative;
 
 }
 
 .intro-data-mob {
-
+    background-color: var(--maincolor);
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     position: relative;
-
+    margin-top: 150px;
 }
 
 .intro-heading-mob {
 
-    max-width: 75%;
+    max-width: 80%;
     text-align: center;
     font-family: "Raleway", sans-serif;
-    font-size: 2em;
+    font-size: 6vw;
     font-weight: 550;
     color: white;
-    z-index: 1;
+    z-index: 3;
 }
 
 .intro-para-mob {
@@ -80,13 +87,390 @@ nav>a>img {
     max-width: 75%;
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
+    font-size: 3.5vw;
+    margin-bottom: 4vh;
     color: white;
 }
 
 .curvy-img {
-    top: -70px;
+    top: -200px;
     width: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+}
+
+.submit-btn {
+    border: none;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    font-size: 3.8vw;
+    padding: 3vw 3.5vw;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to right, var(--ctacolor1), var(--ctacolor2));
+    border-radius: 50px;
+    width: 60%;
+}
+
+
+.skill-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--maincolor);
+    color: white;
+    font-family: "Raleway", sans-serif;
+
+}
+
+.skill {
+
+    margin: auto;
+    width: 69%;
+    text-align: center;
+    padding-top: 20vw;
+}
+
+.skill h3 {
+    font-size: 4.2vw;
+}
+
+.skill img {
+
+    height: 15vw;
+}
+
+.skill p {
+    font-size: 2.8vw;
+    font-weight: 400;
+    line-height: 3vw;
+}
+
+.description {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--maincolor);
+    margin-top: 10vw;
+
+    color: white;
+    padding: 6vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.description-data {
+    /* width: 90%; */
+    margin-top: 10vw;
+    text-align: left;
+}
+
+
+.description-data h3 {
+
+    font-size: 4.9vw;
+    font-weight: 500;
+}
+
+.description-data p {
+
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3vw;
+    line-height: 4vw;
+}
+
+/* 
+.description-data p:hover{
+
+color: blue; 
+    text-decoration: underline;
+} */
+
+.cta1 {
+    display: flex;
+    font-weight: 500;
+
+    align-items: center;
+    color: var(--ctacolor1);
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+.cta1 img {
+    height: 4vw;
+    margin-left: 1.5vw;
+
+}
+
+.line {
+    position: relative;
+    color: var(--ctacolor1);
+    height: 5vw;
+    width: 100%;
+}
+
+.testimonials {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: 3vh;
+    font-weight: 400;
+    line-height: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25vh 0;
+}
+
+.reviews {
+    font-family: "Raleway", sans-serif;
+
+    background-color: var(--testimonialclr);
+    width: 70%;
+    /* margin: auto; */
+    border-radius: 6px;
+    padding: 4vh 4vh;
+    margin: 4vh auto;
+}
+
+.identity {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    /* justify-content: space-between; */
+}
+
+.identity img {
+    height: 7vh;
+    border-radius: 100%;
+}
+
+.identity div {
+    /* font-family: "Raleway", sans-serif; */
+
+    line-height: 3.5vh;
+    margin-left: 2vh;
+    padding-top: 1vh;
+    letter-spacing: 0.1vh;
+}
+
+.identity h3 {
+    font-size: 2.8vh;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.identity span {
+    font-size: 2vh;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.reviews-container {
+    width: 96%;
+    text-align: left;
+}
+
+/* 
+footer {
+font-size: 5vh ; 
+    color: white;
+} */
+
+.footer-container {
+    padding: 3vh 6vh;
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    background-color: var(--footercolor);
+    /* position: relative; */
+}
+
+.mail-container {
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    top: -20vh;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    background-color: var(--maincolor);
+    width: 70%;
+    /* height: 40vh; */
+    text-align: center;
+    margin: auto;
+    padding: 3vh 5vh;
+    border-radius: 10px;
+    box-shadow: rgb(61, 61, 61) 2px 2px 5px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* position: absolute; */
+}
+
+.mail-container h3 {
+    letter-spacing: 0.1vh;
+    font-weight: 400;
+
+}
+
+.mail-container p {
+    letter-spacing: 0.1vh;
+
+    font-weight: 100;
+
+}
+
+.mail-container input {
+    font-family: "Raleway", sans-serif;
+    text-wrap: nowrap;
+    cursor: text;
+    border: none;
+    font-size: 2vw;
+    padding: 2vw 5vw;
+    font-weight: 400;
+    color: black;
+    width: 75%;
+    height: 3vh;
+    border-radius: 100px;
+    transition: 0.3s all ease-out;
+    /* background: linear-gradient(to right, var(--ctacolor1), var(--ctacolor2)); */
+}
+
+
+.mail-container input:focus {
+    outline: none;
+    font-size: 2.05vh;
+}
+
+.mail-container button {
+    margin-top: 2vh;
+    font-family: "Open Sans", sans-serif;
+    /* text-wrap: nowrap; */
+    cursor: pointer;
+    border: none;
+    font-size: 2.5vw;
+    padding: 2vw 5vw;
+    font-weight: 400;
+    color: white;
+    width: 90%;
+    height: 7vh;
+    text-align: center;
+    border-radius: 200px;
+    background: linear-gradient(to right, var(--ctacolor1), var(--ctacolor2));
+}
+
+.footer-logo {
+
+    height: 7vh;
+    margin: 1vh;
+}
+
+.footer-links {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.1vh;
+    padding: 0 2vh;
+}
+
+.footer-links {
+    width: 80%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    position: relative;
+}
+
+.location img {
+    height: 4vh;
+    position: absolute;
+    top: 3vh;
+}
+
+.footer-links p {
+    margin-left: 5vh;
+}
+
+.call img,
+.mail img {
+    height: 3vh;
+    position: absolute;
+    top: 2.4vh;
+}
+
+.footer-links-container {
+    margin-top: 35vh;
+}
+
+.footer-cta-parent {
+
+    text-decoration: none;
+    color: white;
+    font-size: 3.4vh;
+    font-weight: 100;
+    font-family: "raleway", sans-serif;
+    padding-left: 2vh;
+    padding-top: 4vh;
+}
+
+.footer-cta-parent li {
+    cursor: pointer;
+    letter-spacing: 0.1vh;
+    list-style-type: none;
+    padding-left: 0;
+    padding: 1.2vh 0.2vh;
+    transition: 0.2s all ease-in-out;
+}
+
+.footer-cta-parent li:hover {
+    color: #bebebe;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-icon-container {
+    margin: 4vh 0;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.fa-3xl {
+    cursor: pointer;
+    font-size: 6.5vh;
+    margin: 0 3vh;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: aquamarine;
+}
+
+.attribution a {
+    color: white(228, 45%, 44%);
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+@media (min-width : 720px) {
+
+
+    ul a {
+       
+        text-decoration: none;
+        color: white;
+        font-size: clamp(1.3rem , 0.2vw , 4rem);
+        text-wrap: nowrap;
+    }
+
+    nav>a>img {
+        height: 4vw;
+    }
+
 }
